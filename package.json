@@ -1,0 +1,26 @@
+{
+  "name": "purple-jellyfish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klynmc/purple-jellyfish.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klynmc/purple-jellyfish/issues"
+  },
+  "homepage": "https://github.com/klynmc/purple-jellyfish#readme"
+}
