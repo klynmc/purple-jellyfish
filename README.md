@@ -9,5 +9,11 @@ To create a profile page for a team's members based off user input
 ## Installation
 Install node and inquirer via your terminal, copy the SSH key from this repository, use "git clone" to save the app to your desktop, and finally type "node index.js" to activate the app
 
+## Walkthrough Video 
+
+https://youtu.be/q0_egGq6hzE
+
+*I do not own this video*
+
 ## Contribution
 Made by Leigha McKay
