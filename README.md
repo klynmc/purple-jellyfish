@@ -11,9 +11,5 @@ Install node and inquirer via your terminal, copy the SSH key from this reposito
 
 ## Walkthrough Video 
 
-https://youtu.be/q0_egGq6hzE
-
-*I do not own this video*
-
 ## Contribution
 Made by Leigha McKay
