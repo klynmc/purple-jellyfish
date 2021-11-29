@@ -30,35 +30,46 @@ const promptUser = () => {
 ])};
 
 //adding teammembers section
-const promptAddMember = () => {
-    return inquirer.prompt([
-        {
-            type: 'confirm',
-            name: 'confirmAddProject',
-            message: 'Would you like to enter another project?',
-            default: false
-        }
-        
-        ])
-        .then(memberData => {
-            members.push(memberData);
-            if (memberData.confirmAddMember) {
-            return promptMember();
-            } else {
-            return memberData;
-        }
-    });
+const promptMember = memberData => {
+
+  if (!memberData.members) {
+    memberData.members = [];
+  }
+
+  console.log( `
+  ============
+  Add a Member
+  ============
+  `);
+
+  return inquirer.prompt([
+      {
+          type: 'confirm',
+          name: 'confirmAddMember',
+          message: 'Would you like to enter another member?',
+          default: false
+      }
+      
+      ])
+      .then(membersData => {
+          memberData.members.push(membersData);
+          if (membersData.confirmAddMember) {
+          return promptMember(memberData);
+          } else {
+          return memberData;
+      }
+  });
 }
 
-
 promptUser()
+  .then(promptMember)
   //.then(promptProject)
   //.then(portfolioData => {
     //return generatePage(portfolioData);
   //})
-  .then(pageHTML => {
+  /* .then(pageHTML => {
     return writeFile(pageHTML);
-  })
+  }) */
   .then(writeFileResponse => {
     console.log(writeFileResponse);
     return copyFile();
